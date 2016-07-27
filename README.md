@@ -1,5 +1,4 @@
-gettingandcleaningdata_assignment
-This repo hosts the R code and files for the Coursera Data Science's track course "Getting and Cleaning data".
+
 
 COURSERA GETTING AND CLEANING DATA ASSIGNMENT
 HENK PRETORIUS
