@@ -34,4 +34,4 @@ Appropriately labels the data set with descriptive variable names.
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 This final R object is called meandata and the table produced and saved is 
 
-Notes in the actual script provide the detailed steps that achieves the above
+Notes in the actual script provide the detailed steps that achieves the above.
