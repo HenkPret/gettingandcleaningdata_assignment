@@ -19,7 +19,7 @@ activityrecognition@smartlab.ws
 
  FILES IN THIS REPO
 
- run_analysis.R is the script that achives a tidy dataset as required by the assignment
+ run_analysis.R is the script that achieves a tidy dataset as required by the assignment
  CodeBook.md contains the variables and their descriptions 
 
  WHAT THE SCRIPT DOES
