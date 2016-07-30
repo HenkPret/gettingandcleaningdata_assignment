@@ -4,7 +4,7 @@ require(dplyr)
 require(plyr)
 
 # Set working directory for script
-setwd("./UCI HAR Dataset/")
+setwd("C:/Users/Henk/Desktop/May 2016/April 2016/Coursera R/Working_directory/Getting and cleaning data/UCI HAR Dataset/")
 
 # Get featurenames and activity labels, and retain only names vector by subsetting on second column
 featurenames <- read.table(("features.txt"))
@@ -48,7 +48,15 @@ alldata$activitylabels <- revalue(alldata$activitylabels, c("1"="WALKING", "2"="
 alldatasubset <- alldata[,grep(("subjectnr|activitylabels|mean|std"), colnames(alldata))]
 alldatasubset$subjectnr <- as.factor(alldatasubset$subjectnr)
 
-# Melt data and cast new tidy dataset with mean per subject by activity label, write new table as tidy txt file
+# Melt data and cast new tidy dataset with mean per subject by activity label
 melteddata <- melt(alldatasubset, id = c("subjectnr", "activitylabels"))
 meandata <- dcast(melteddata, subjectnr + activitylabels ~ variable, mean)
-write.table(meandata, "meandata.txt", sep="\t")
+
+# Change column names to be more descriptive
+names(meandata) <- gsub("-mean\\(\\)", "Mean", names(meandata))
+names(meandata) <- gsub("-std\\(\\)", "StandardDeviation", names(meandata))
+names(meandata) <- gsub("^t", "Time", names(meandata))
+names(meandata) <- gsub("^f", "Frequency", names(meandata))
+
+# Write a table as tidy txt file
+write.table(meandata, "meandata.txt", sep="\t", row.names = FALSE)
