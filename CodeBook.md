@@ -4,7 +4,7 @@ This codebook contains the variables in the resulting txt file (meandata.txt) wh
 
 # Identifier variables
 
-The two factor variables.
+The two factor variables
 
 •	Subjectnr
 Factor with 30 levels indicating the subject ID.
