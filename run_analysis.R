@@ -4,7 +4,7 @@ require(dplyr)
 require(plyr)
 
 # Set working directory for script
-setwd("C:/Users/Henk/Desktop/May 2016/April 2016/Coursera R/Working_directory/Getting and cleaning data/UCI HAR Dataset/")
+setwd("./Getting and cleaning data/UCI HAR Dataset/")
 
 # Get featurenames and activity labels, and retain only names vector by subsetting on second column
 featurenames <- read.table(("features.txt"))
